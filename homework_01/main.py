@@ -48,4 +48,4 @@ def filter_numbers(numbers_list, filter_type):
     elif filter_type == PRIME:
         return list(filter(is_prime, numbers_list))
     else:
-        print(f"ValueError. Filter type can not be {filter_type}")
+        raise ValueError("Enter correct filter type")
