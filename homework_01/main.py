@@ -23,7 +23,7 @@ PRIME = "prime"
 def is_prime(num):
     if num <= 1:
         return False
-    if num == 2:
+    elif num == 2:
         return num
     k = 2
     while k * k <= num and num % k != 0:
@@ -43,7 +43,9 @@ def filter_numbers(numbers_list, filter_type):
     """
     if filter_type == ODD:
         return [number for number in numbers_list if number % 2 != 0]
-    if filter_type == EVEN:
+    elif filter_type == EVEN:
         return [number for number in numbers_list if number % 2 == 0]
-    if filter_type == PRIME:
+    elif filter_type == PRIME:
         return list(filter(is_prime, numbers_list))
+    else:
+        print(f"ValueError. Filter type can not be {filter_type}")
