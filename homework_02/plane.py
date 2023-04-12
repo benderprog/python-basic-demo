@@ -2,7 +2,7 @@
 создайте класс `Plane`, наследник `Vehicle`
 """
 from homework_02.base import Vehicle
-from homework_02.exceptions import CargoOverLoad
+from homework_02.exceptions import CargoOverload
 
 class Plane(Vehicle):       #класс Plane должен быть наследником Vehicle
     """
@@ -35,7 +35,7 @@ class Plane(Vehicle):       #класс Plane должен быть наслед
         if full_weight <= self.max_cargo:
             self.cargo += cargo_weight
         else:
-            raise CargoOverLoad()
+            raise CargoOverload
 
 
     def remove_all_cargo(self):
