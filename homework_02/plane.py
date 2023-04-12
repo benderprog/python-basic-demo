@@ -23,7 +23,7 @@ class Plane(Vehicle):       #класс Plane должен быть наслед
 
 
 
-    def load_cargo(self, weight):
+    def load_cargo(self, cargo_weight):
         """
         объявите метод load_cargo, который принимает число, проверяет,
         что в сумме с текущим cargo не будет перегруза, и обновляет значение,
@@ -31,17 +31,20 @@ class Plane(Vehicle):       #класс Plane должен быть наслед
         :param weight:
         :return:
         """
-        full_weight = self.weight + self.cargo
+        full_weight = cargo_weight + self.cargo
         if full_weight <= self.max_cargo:
-            return full_weight
+            self.cargo += cargo_weight
         else:
             raise CargoOverLoad()
 
 
-    def remove_all_cargo(self, cargo):
+    def remove_all_cargo(self):
         """
         объявите метод remove_all_cargo, который обнуляет значение cargo и
         возвращает значение cargo, которое было до обнуления
         :param cargo:
         :return:
         """
+        result = self.cargo
+        self.cargo = 0
+        return result
