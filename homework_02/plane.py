@@ -19,7 +19,7 @@ class Plane(Vehicle):       #класс Plane должен быть наслед
         self.fuel = fuel
         self.fuel_consumption = fuel_consumption
         self.max_cargo = max_cargo
-        self.cargo = max_cargo
+        self.cargo = 0
 
 
 
