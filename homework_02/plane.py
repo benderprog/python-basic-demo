@@ -15,9 +15,7 @@ class Plane(Vehicle):       #класс Plane должен быть наслед
         добавьте max_cargo в инициализатор (переопределите родительский)
         :param max_cargo:
         """
-        self.weight = weight
-        self.fuel = fuel
-        self.fuel_consumption = fuel_consumption
+        super().__init__(weight, fuel, fuel_consumption)
         self.max_cargo = max_cargo
         self.cargo = 0
 
@@ -28,7 +26,7 @@ class Plane(Vehicle):       #класс Plane должен быть наслед
         объявите метод load_cargo, который принимает число, проверяет,
         что в сумме с текущим cargo не будет перегруза, и обновляет значение,
         в ином случае выкидывает исключение exceptions.CargoOverload
-        :param weight:
+        :param:
         :return:
         """
         full_weight = cargo_weight + self.cargo
@@ -42,7 +40,7 @@ class Plane(Vehicle):       #класс Plane должен быть наслед
         """
         объявите метод remove_all_cargo, который обнуляет значение cargo и
         возвращает значение cargo, которое было до обнуления
-        :param cargo:
+        :param:
         :return:
         """
         result = self.cargo
