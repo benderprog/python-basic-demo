@@ -1,15 +1,7 @@
-"""
-create dataclass `Engine`
-"""
-
 from dataclasses import dataclass
 
 
 @dataclass
-class Engine():
-    """
-    добавьте атрибуты volume и pistons
-    """
+class Engine:
     volume: float
     pistons: int
-
